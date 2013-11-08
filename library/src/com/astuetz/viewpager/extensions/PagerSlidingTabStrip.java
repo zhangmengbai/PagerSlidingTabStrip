@@ -49,6 +49,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 	// @formatter:off
 	private static final int[] ATTRS = new int[] {
+        android.R.attr.textAppearance,
 		android.R.attr.textSize,
 		android.R.attr.textColor
     };
@@ -87,8 +88,10 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 	private int tabPadding = 24;
 	private int dividerWidth = 1;
 
-	private int tabTextSize = 12;
+	private int tabTextAppearance = 0;
+	private int tabTextSize = 0;
 	private int tabTextColor = 0xFF666666;
+	// private int tabTextSize = 12;
 	private Typeface tabTypeface = null;
 	private int tabTypefaceStyle = Typeface.BOLD;
 
@@ -131,8 +134,9 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 		TypedArray a = context.obtainStyledAttributes(attrs, ATTRS);
 
-		tabTextSize = a.getDimensionPixelSize(0, tabTextSize);
-		tabTextColor = a.getColor(1, tabTextColor);
+		tabTextAppearance = a.getResourceId(0, 0);
+		tabTextSize = a.getDimensionPixelSize(1, tabTextSize);
+		tabTextColor = a.getColor(2, tabTextColor);
 
 		a.recycle();
 
@@ -279,7 +283,10 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 			if (v instanceof TextView) {
 
 				TextView tab = (TextView) v;
-				tab.setTextSize(TypedValue.COMPLEX_UNIT_PX, tabTextSize);
+				if (tabTextAppearance != 0)
+				    tab.setTextAppearance(getContext(), tabTextAppearance);
+				if (tabTextSize != 0)
+				    tab.setTextSize(TypedValue.COMPLEX_UNIT_PX, tabTextSize);
 				tab.setTypeface(tabTypeface, tabTypefaceStyle);
 				tab.setTextColor(tabTextColor);
 
