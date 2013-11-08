@@ -140,17 +140,17 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 		a = context.obtainStyledAttributes(attrs, R.styleable.PagerSlidingTabStrip);
 
-		indicatorColor = a.getColor(R.styleable.PagerSlidingTabStrip_indicatorColor, indicatorColor);
-		underlineColor = a.getColor(R.styleable.PagerSlidingTabStrip_underlineColor, underlineColor);
-		dividerColor = a.getColor(R.styleable.PagerSlidingTabStrip_dividerColor, dividerColor);
-		indicatorHeight = a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_indicatorHeight, indicatorHeight);
-		underlineHeight = a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_underlineHeight, underlineHeight);
-		dividerPadding = a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_dividerPadding, dividerPadding);
-		tabPadding = a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_tabPaddingLeftRight, tabPadding);
-		tabBackgroundResId = a.getResourceId(R.styleable.PagerSlidingTabStrip_tabBackground, tabBackgroundResId);
-		shouldExpand = a.getBoolean(R.styleable.PagerSlidingTabStrip_shouldExpand, shouldExpand);
-		scrollOffset = a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_scrollOffset, scrollOffset);
-		textAllCaps = a.getBoolean(R.styleable.PagerSlidingTabStrip_textAllCaps, textAllCaps);
+		indicatorColor = a.getColor(R.styleable.PagerSlidingTabStrip_pstIndicatorColor, indicatorColor);
+		underlineColor = a.getColor(R.styleable.PagerSlidingTabStrip_pstUnderlineColor, underlineColor);
+		dividerColor = a.getColor(R.styleable.PagerSlidingTabStrip_pstDividerColor, dividerColor);
+		indicatorHeight = a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_pstIndicatorHeight, indicatorHeight);
+		underlineHeight = a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_pstUnderlineHeight, underlineHeight);
+		dividerPadding = a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_pstDividerPadding, dividerPadding);
+		tabPadding = a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_pstTabPaddingLeftRight, tabPadding);
+		tabBackgroundResId = a.getResourceId(R.styleable.PagerSlidingTabStrip_pstTabBackground, tabBackgroundResId);
+		shouldExpand = a.getBoolean(R.styleable.PagerSlidingTabStrip_pstShouldExpand, shouldExpand);
+		scrollOffset = a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_pstScrollOffset, scrollOffset);
+		textAllCaps = a.getBoolean(R.styleable.PagerSlidingTabStrip_pstTextAllCaps, textAllCaps);
 
 		a.recycle();
 

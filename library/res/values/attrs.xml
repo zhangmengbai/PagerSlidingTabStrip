@@ -2,17 +2,17 @@
 <resources>
 
     <declare-styleable name="PagerSlidingTabStrip">
-        <attr name="indicatorColor" format="color" />
-        <attr name="underlineColor" format="color" />
-        <attr name="dividerColor" format="color" />
-        <attr name="indicatorHeight" format="dimension" />
-        <attr name="underlineHeight" format="dimension" />
-        <attr name="dividerPadding" format="dimension" />
-        <attr name="tabPaddingLeftRight" format="dimension" />
-        <attr name="scrollOffset" format="dimension" />
-        <attr name="tabBackground" format="reference" />
-        <attr name="shouldExpand" format="boolean" />
-        <attr name="textAllCaps" format="boolean" />
+        <attr name="pstIndicatorColor" format="color" />
+        <attr name="pstUnderlineColor" format="color" />
+        <attr name="pstDividerColor" format="color" />
+        <attr name="pstIndicatorHeight" format="dimension" />
+        <attr name="pstUnderlineHeight" format="dimension" />
+        <attr name="pstDividerPadding" format="dimension" />
+        <attr name="pstTabPaddingLeftRight" format="dimension" />
+        <attr name="pstScrollOffset" format="dimension" />
+        <attr name="pstTabBackground" format="reference" />
+        <attr name="pstShouldExpand" format="boolean" />
+        <attr name="pstTextAllCaps" format="boolean" />
     </declare-styleable>
 
 </resources>
