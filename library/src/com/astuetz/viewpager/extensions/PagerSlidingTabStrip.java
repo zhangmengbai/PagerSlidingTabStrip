@@ -181,8 +181,6 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 			throw new IllegalStateException("ViewPager does not have adapter instance.");
 		}
 
-		pager.setOnPageChangeListener(pageListener);
-
 		notifyDataSetChanged();
 	}
 
@@ -225,6 +223,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 				currentPosition = pager.getCurrentItem();
 				scrollToChild(currentPosition, 0);
+				pager.setOnPageChangeListener(pageListener);
 			}
 		});
 
