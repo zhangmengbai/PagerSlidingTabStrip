@@ -34,6 +34,7 @@ import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.HorizontalScrollView;
@@ -630,4 +631,32 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 		};
 	}
 
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        int keyCode = event.getKeyCode();
+        int action = event.getAction();
+
+        View focused = getFocusedChild();
+        if (focused != null && action == KeyEvent.ACTION_DOWN) {
+            switch(keyCode) {
+            case KeyEvent.KEYCODE_DPAD_LEFT: {
+                int currentItem = pager.getCurrentItem();
+                if (currentItem > 0) {
+                    pager.setCurrentItem(currentItem - 1);
+                }
+                return true;
+            }
+            case KeyEvent.KEYCODE_DPAD_RIGHT: {
+                int currentItem = pager.getCurrentItem();
+                int itemCount = pager.getAdapter().getCount();
+                if (currentItem < itemCount - 1) {
+                    pager.setCurrentItem(currentItem + 1);
+                }
+                return true;
+            }
+            }
+        }
+
+        return super.dispatchKeyEvent(event);
+    }
 }
